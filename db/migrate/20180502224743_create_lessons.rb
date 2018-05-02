@@ -2,8 +2,8 @@ class CreateLessons < ActiveRecord::Migration[5.1]
   def change
     create_table :lessons do |t|
       t.string :name
-      t.text :description
       t.string :address
+      t.text :description
       t.integer :longitude
       t.integer :latitude
       t.date :start_time
