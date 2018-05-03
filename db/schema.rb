@@ -16,25 +16,17 @@ ActiveRecord::Schema.define(version: 20180502233120) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "total_price"
     t.bigint "user_id"
-    t.bigint "teacher_id"
     t.bigint "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["lesson_id"], name: "index_bookings_on_lesson_id"
-    t.index ["teacher_id"], name: "index_bookings_on_teacher_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "lessons", force: :cascade do |t|
     t.string "name"
-    t.string "address"
     t.text "description"
-    t.integer "longitude"
-    t.integer "latitude"
-    t.date "start_time"
-    t.date "end_time"
     t.integer "price"
     t.bigint "teacher_id"
     t.datetime "created_at", null: false
@@ -46,8 +38,9 @@ ActiveRecord::Schema.define(version: 20180502233120) do
   create_table "teachers", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "subject"
     t.text "background"
+    t.integer "longitude"
+    t.integer "latitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -73,7 +66,6 @@ ActiveRecord::Schema.define(version: 20180502233120) do
   end
 
   add_foreign_key "bookings", "lessons"
-  add_foreign_key "bookings", "teachers"
   add_foreign_key "bookings", "users"
   add_foreign_key "lessons", "teachers"
 end

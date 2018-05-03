@@ -3,8 +3,9 @@ class CreateTeachers < ActiveRecord::Migration[5.1]
     create_table :teachers do |t|
       t.string :first_name
       t.string :last_name
-      t.string :subject
       t.text :background
+      t.integer :longitude
+      t.integer :latitude
 
       t.timestamps
     end
