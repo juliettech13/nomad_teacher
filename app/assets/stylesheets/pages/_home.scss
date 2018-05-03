@@ -11,6 +11,16 @@
 
 .container-icons {
   background-color: white;
+  height: 100vh;
+  padding: 150px;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
 
 .icons {
@@ -19,13 +29,12 @@
 }
 
 .icon-info {
-      padding: 30px 20px;
-      h2 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #b3b3b3;
+  padding: 30px 20px;
+  h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b3b3b3;
   }
-
   p {
     font-size: 15px;
     max-width: 200px;
