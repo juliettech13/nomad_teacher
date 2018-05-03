@@ -1,0 +1,36 @@
+.header {
+  height: 80vh;
+  background-color: #2a5e9c;
+  background-size: cover;
+
+  h1 {
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: white;
+    font-size: 47px;
+  }
+  p {
+    font-size: 24px;
+    color: #eaf5ff85;
+    text-transform: capitalize;
+  }
+}
+
+.header-content {
+  padding: 70px 0px;
+  text-align: center;
+}
+
+.btn-custom {
+  color: #fff;
+    /* letter-spacing: 1px; */
+    font-weight: med;
+    text-transform: capitalize;
+    background-color: #E91E63;
+    border-color: #ea1f62;
+    border-radius: 51px;
+    a {
+    color: white;
+    }
+    width: 187px;
+  }
