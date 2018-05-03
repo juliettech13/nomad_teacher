@@ -4,10 +4,18 @@
   background-color: #e7eff3;
   transition: all 0.3s ease;
   height: 50px;
-  padding: 0px 30px;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom-style: solid;
+  border-color: #020024;
+  border-width: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  opacity: 0.8
 }
 
 /* Logo */

@@ -10,7 +10,7 @@
 }
 
 .container-icons {
-  background-color: white;
+  background-color: #CAD1D7;
   height: 100vh;
   padding: 150px;
 }
@@ -24,20 +24,22 @@
 }
 
 .icons {
-   justify-content: center;
+  justify-content: center;
   display: flex;
+  justify-content: space-between;
 }
 
 .icon-info {
   padding: 30px 20px;
   h2 {
-  font-size: 20px;
+  font-size: 10px;
   font-weight: bold;
   color: #b3b3b3;
   }
   p {
-    font-size: 15px;
-    max-width: 200px;
+    font-size: 18px;
+    max-width: 300px;
+    font-family: 'Cutive Mono', 'sans serif'
   }
 }
 
@@ -45,8 +47,9 @@
   height: 350px;
   text-align: center;
   h2 {
-    font-size: 20px;
-    color: #b3b3b3;
+    font-size: 35px;
+    color: #900048;
+    font-family: 'Carrois Gothic', 'sans serif'
   }
 }
 

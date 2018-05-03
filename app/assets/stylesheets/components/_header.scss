@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .header {
   height: 100vh;
   background-color: #2a5e9c;
@@ -12,12 +16,20 @@
     font-size: 24px;
     color: #eaf5ff85;
   }
+  .btn-custom {
+    margin-left: 150px
+  }
 }
 
+
 .header-content {
-  padding: 70px 0px;
+  // padding: 70px 0px;
   text-align: center;
-  margin-left: 500px;
+  // margin-left: 500px;
+  img {
+    height: 250px
+
+  }
 }
 
 .header-content img{
