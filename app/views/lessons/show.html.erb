@@ -4,8 +4,9 @@
     <h1 class="text-center"><%= @lesson.name %></h1>
   </div>
   <div class="col-xs-6">
-    <div class="banner" style="background-image: url('<%=cl_image_path @lesson.picture, crop: :fill %>');">
+    <div class="banner" style="background-image: url(<%= image_path @lesson.picture %>);">
     </div>
+
     <!-- <div class="your-brush-options text-center">
       <%# if user_signed_in? %>
         <%# if policy(@toothbrush).edit? %>
