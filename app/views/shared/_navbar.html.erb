@@ -10,8 +10,8 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "All Lessons", lessons_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Your Bookings", bookings_show_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "All Lessons", lessons_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%#= link_to "Your Bookings", lesson_booking_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">

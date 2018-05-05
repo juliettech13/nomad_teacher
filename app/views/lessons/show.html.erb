@@ -7,42 +7,36 @@
     <div class="banner" style="background-image: url(<%= image_path @lesson.picture %>);">
     </div>
 
-    <!-- <div class="your-brush-options text-center">
+    <div class="your-brush-options text-center">
       <%# if user_signed_in? %>
-        <%# if policy(@toothbrush).edit? %>
-          <h2>This is your brush</h2>
-          <div class="btn btn-custom text-center">
-            <%#= link_to "Edit", edit_toothbrush_path(@toothbrush) %>
-          </div>
-          <div class="btn btn-custom text-center">
-            <%#= link_to "Delete", toothbrush_path, method: :delete %>
-          </div>
-        <%# end %>
+      <%# if policy(@toothbrush).edit? %>
+
+      <div class="btn btn-custom text-center">
+        <%= link_to "Book", new_lesson_booking_path(@lesson) %>
+      </div>
+      <%# end %>
       <%# else %>
-        <div class="text-center">
-           <h2>Are you a member?</h2>
-          <%#= link_to "Log in to edit" , new_user_session_path, class: "btn btn-custom" %>
-        </div>
+
       <%# end %>
     </div>
   </div>
 
-    <div class="description-text col-xs-6">
-      <div class="availability">
-        <div class="price-availability">
-          <h4>Available: <%# if @toothbrush.availability %>
-            <i class="available-icon fas fa-check-circle"></i>
-            <%# else %>
-            <i class="unavailable-icon fas fa-times-circle"></i>
-            <%# end %>
-          </h4>
-        </div>
-        <h4>Price: <strong> <%#= @toothbrush.price %> $ </strong></h4>
+  <div class="description-text col-xs-6">
+    <div class="information">
+      <div class="price">
+        <h4>Length of course: <%= @lesson.timing %></h4>
       </div>
-      <h2>About this brush</h2>
-      <p><%#= @toothbrush.description %></p>
-
-      <h2>Specs</h2>
+      <div class="time">
+        <h4>Price: <strong> <%= @lesson.pricing %> EUR </strong></h4>
+      </div>
+    </div>
+    <h2>Class description:</h2>
+    <p><%= @lesson.description %></p>
+    <h2>About the teacher:</h2>
+    <h4>Name: <strong> <%= @teacher.naming %></strong></h4>
+    <h4>Background:</h4>
+    <p><%= @teacher.background %></p>
+      <!-- <h2>Specs</h2>
       <div class="row">
         <div class="spec-list col-xs-9">
           <ul>
@@ -63,7 +57,7 @@
               </li>
             </div>
           </ul>
-        </div>
+        </div> -->
       </div>
       <div>
         <h2>
@@ -81,7 +75,7 @@
           </li>
         </ul>
       </div>
-    </div> -->
+    </div>
   </div>
 </div>
 
@@ -109,4 +103,4 @@
     </div>
   </div>
 </div>
- -->
+-->
