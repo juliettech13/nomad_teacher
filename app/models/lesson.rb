@@ -7,6 +7,8 @@ class Lesson < ApplicationRecord
   validates :category, presence: true
   validates :picture, presence: true
 
+  monetize :price_cents
+
   def pricing
     self.price / 100
   end

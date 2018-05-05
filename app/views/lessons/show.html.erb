@@ -21,7 +21,7 @@
           <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
         </div>
         <div class="lesson-time">
-          <h4><strong>Price:</strong> <%= @lesson.pricing %> EUR</h4>
+          <h4><strong>Price:</strong> <%= humanized_money_with_symbol(@lesson.pricing) %></h4>
         </div>
       </div>
       <div class="teacher-info">
