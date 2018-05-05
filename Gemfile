@@ -20,6 +20,7 @@ gem 'webpacker'
 gem 'faker'
 gem 'cloudinary'
 gem 'pundit'
+gem 'heroku'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
