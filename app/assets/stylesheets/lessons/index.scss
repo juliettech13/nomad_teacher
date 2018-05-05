@@ -1,0 +1,121 @@
+// Import your components CSS files here.
+
+@import "pages/home";
+@import "components/card";
+
+.avatar {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.booking-index {
+  min-height: 70vh;
+}
+
+.new-brush {
+  h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #b3b3b3;
+  }
+}
+
+.avatar-large {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.avatar-bordered {
+  width: 30px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+.avatar-square {
+  width: 30px;
+  border-radius: 0px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+.container-bg {
+  background-color: #020024;
+  height: 60vh;
+}
+
+.title-container {
+  padding: 12%;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  h1 {
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: white;
+    font-size: 47px;
+  }
+  p {
+    font-size: 24px;
+    color: #ff4057;
+    // text-transform: capitalize;
+  }
+}
+
+.title {
+  margin: auto;
+  text-align: center;
+  h1 {
+    font-family: 'Carrois Gothic', 'sans serif'
+  }
+  p {
+    font-family: 'Cutive Mono', 'sans serif';
+  }
+}
+
+.sub-title {
+ text-align: left;
+ // padding: 4px 15px 50px 11px;
+ p {
+  margin: 6px;
+  color: white;
+  font-size: 14px;
+  }
+}
+
+.listing{
+  margin: 60px
+}
+.counter-highlight {
+  background-color: #900048;
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px 3px 13px;
+  margin: 0px 5px 0px 0px;
+}
+
+.counter-text {
+  h2 {
+   padding-left: 4px;
+   font-size: 20px;
+   color: #b3b3b3;
+ }
+}
+
+.control-label {
+  color: #b3b3b3;
+  font-weight: 100;
+  margin-bottom: 4px;
+}
+
+.booking-index {
+  min-height: 75vh;
+}
+
+.booking-index-profile {
+  min-height: 78vh;
+}
+
+.booking-index-profile-2 {
+  min-height: 78vh;
+}

@@ -1,2 +1,15 @@
-<h1>Lessons#show</h1>
-<p>Find me in app/views/lessons/show.html.erb</p>
+<div class="lesson-show">
+  <div class="container-title-show">
+    <div class="lesson-name">
+      <h1><%= @lesson.name %></h1>
+    </div>
+  </div>
+  <div class="lesson-info">
+    <div class="lesson-description">
+      <p><%= @lesson.description %></p>
+    </div>
+    <div class="lesson-price">
+      <p><%= @lesson.pricing %> EUROS</p>
+    </div>
+  </div>
+</div>

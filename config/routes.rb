@@ -1,51 +1,37 @@
 Rails.application.routes.draw do
 
-
-  get 'reviews/index'
-
-  get 'reviews/show'
-
-  get 'reviews/new'
-
-  get 'reviews/create'
-
-  get 'reviews/destroy'
-
-  get 'bookings/show'
-
-  get 'bookings/new'
-
-  get 'bookings/create'
-
-  get 'bookings/edit'
-
-  get 'bookings/update'
-
-  get 'bookings/destroy'
-
-  get 'lessons/index'
-
-  get 'lessons/show'
-
-  get 'lessons/new'
-
-  get 'lessons/create'
-
-  get 'lessons/edit'
-
-  get 'lessons/update'
-
-  get 'lessons/destroy'
-
-  get 'teachers/new'
-
-  get 'teachers/create'
-
-  get 'teachers/edit'
-
-  get 'teachers/update'
-
-  devise_for :users
   root to: 'pages#home'
+  devise_for :users
+
+  resources :teachers, only: [:new, :create, :edit, :update]
+  resources :lessons do
+    resources :reviews, only: [:index, :show, :new, :create, :destroy]
+    resources :bookings, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  end
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
+
+
+
+  # devise_for :users, :controllers => { registrations: 'registrations' }
+  # root to: 'pages#home'
+  # get 'about', to: 'pages#about', as: :about
+  # # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # get 'user_toothbrushes', to: "toothbrushes#show_toothbrushes"
+  # resources :toothbrushes do
+  #   resources :bookings, only: [:new, :create]
+  # end
+  # resources :bookings, only: [:index, :show, :destroy, :update] do
+  #     resources :reviews, only: [:create, :index, :show, :edit, :update]
+  #   end
+
+  # namespace :my do
+  #   resources :toothbrushes, only: [:index]
+  #   resources :bookings, only: [:index, :update]
+  # end
+
+  # resources :users, only: [:show, :edit, :update]
+

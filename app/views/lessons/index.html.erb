@@ -1,2 +1,16 @@
-<h1>Lessons#index</h1>
-<p>Find me in app/views/lessons/index.html.erb</p>
+ <div class="lesson-index">
+   <div class="container-bg">
+     <div class="title-container">
+      <div class="title">
+        <h1>Find your favorite class</h1>
+        <p>Learn from people from all over the world 🌎</p>
+        <%= link_to "Want to teach?", new_lesson_path, class: "btn btn-custom" %>
+      </div>
+    </div>
+  </div>
+  <div class="container-index">
+    <div class="listing">
+      <%= render "shared/card" %>
+    </div>
+  </div>
+</div>
