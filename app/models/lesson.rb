@@ -5,7 +5,7 @@ class Lesson < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :category, presence: true
-  # validates :picture, presence: true
+  validates :picture, presence: true
 
   def pricing
     self.price / 100

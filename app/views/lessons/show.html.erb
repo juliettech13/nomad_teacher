@@ -6,101 +6,35 @@
   <div class="col-xs-6">
     <div class="banner" style="background-image: url(<%= image_path @lesson.picture %>);">
     </div>
-
     <div class="your-brush-options text-center">
-      <%# if user_signed_in? %>
-      <%# if policy(@toothbrush).edit? %>
-
       <div class="btn btn-custom text-center">
         <%= link_to "Book", new_lesson_booking_path(@lesson) %>
       </div>
-      <%# end %>
-      <%# else %>
-
-      <%# end %>
     </div>
   </div>
-
   <div class="description-text col-xs-6">
-    <div class="information">
-      <div class="price">
-        <h4>Length of course: <%= @lesson.timing %></h4>
-      </div>
-      <div class="time">
-        <h4>Price: <strong> <%= @lesson.pricing %> EUR </strong></h4>
-      </div>
-    </div>
-    <h2>Class description:</h2>
-    <p><%= @lesson.description %></p>
-    <h2>About the teacher:</h2>
-    <h4>Name: <strong> <%= @teacher.naming %></strong></h4>
-    <h4>Background:</h4>
-    <p><%= @teacher.background %></p>
-      <!-- <h2>Specs</h2>
-      <div class="row">
-        <div class="spec-list col-xs-9">
-          <ul>
-            <div class="col-xs-6">
-              <li>
-                <i class="spec-icon fas fa-calendar-check"></i>Age: <strong> <%#= @toothbrush.age %> days old</strong>
-              </li>
-              <li>
-                <i class="spec-icon fas fa-users"></i>Used by: <strong> <%#= pluralize @toothbrush.people, "person" %></strong>
-              </li>
-            </div>
-            <div class="col-xs-6">
-              <li>
-                <i class="spec-icon fas fa-certificate"></i>Material: <strong> <%#= @toothbrush.material %></strong>
-              </li>
-              <li>
-                <i class="spec-icon fas fa-quidditch"></i>Brush-strength: <strong> <%#= @toothbrush.brush_strength %></strong>
-              </li>
-            </div>
-          </ul>
-        </div> -->
-      </div>
-      <div>
-        <h2>
-          Information about the owner
-        </h2>
-        <ul>
-          <li>
-            Name: <strong><%#= @toothbrush.user.first_name %></strong>
-          </li>
-          <li>
-            Gender: <strong> <%#= @toothbrush.user.gender %></strong>
-          </li>
-          <li>
-            Address: <strong> <%#= @toothbrush.user.address %></strong>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="lesson-show">
-  <div class="container-title-show">
-    <div class="lesson-name">
-      <h1><%#= @lesson.name %></h1>
-    </div>
-  </div>
-  <div class="lesson-info">
     <div class="lesson-description">
-      <p><%#= @lesson.description %></p>
-    </div>
-    <div class="lesson-price">
-      <p><%#= @lesson.pricing %> EUROS</p>
+      <h2><strong>Class description:</strong></h2>
+      <p><%= @lesson.description %></p>
+      <div class="lesson-information">
+        <div class="lesson-price">
+          <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
+        </div>
+        <div class="lesson-time">
+          <h4><strong>Price:</strong> <%= @lesson.pricing %> EUR</h4>
+        </div>
+      </div>
+      <div class="teacher-info">
+        <div class="teacher-name">
+          <h2><strong>About the teacher:</strong></h2>
+          <h4><strong>Name:</strong> <%= @teacher.naming %></h4>
+        </div>
+        <div class="teacher-background">
+          <h4><strong>Background:</strong></h4>
+          <p><%= @teacher.background %></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
--->
+

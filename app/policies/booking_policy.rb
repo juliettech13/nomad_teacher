@@ -12,7 +12,7 @@ class BookingPolicy < ApplicationPolicy
   def create?
     # i am not the owner of the toothbrush
     # booking.toothbrush.user != current_user
-    user == record.user
+    true
   end
 
   def edit?
