@@ -16,6 +16,9 @@ ActiveRecord::Schema.define(version: 20180505213325) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
+    t.integer "amount_cents", default: 0, null: false
+    t.string "amount_currency", default: "EUR", null: false
+    t.jsonb "payment"
     t.bigint "user_id"
     t.bigint "lesson_id"
     t.datetime "created_at", null: false
@@ -28,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180505213325) do
     t.string "name"
     t.text "description"
     t.bigint "teacher_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category"
@@ -35,6 +39,7 @@ ActiveRecord::Schema.define(version: 20180505213325) do
     t.integer "time"
     t.integer "price_cents", default: 0, null: false
     t.index ["teacher_id"], name: "index_lessons_on_teacher_id"
+    t.index ["user_id"], name: "index_lessons_on_user_id"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -70,5 +75,6 @@ ActiveRecord::Schema.define(version: 20180505213325) do
   add_foreign_key "bookings", "lessons"
   add_foreign_key "bookings", "users"
   add_foreign_key "lessons", "teachers"
+  add_foreign_key "lessons", "users"
   add_foreign_key "teachers", "users"
 end
