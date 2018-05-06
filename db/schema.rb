@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20180505213325) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "amount_cents", default: 0, null: false
-    t.string "amount_currency", default: "EUR", null: false
     t.jsonb "payment"
     t.bigint "user_id"
     t.bigint "lesson_id"
