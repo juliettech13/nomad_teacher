@@ -10,10 +10,6 @@ class Lesson < ApplicationRecord
 
   monetize :price_cents
 
-  def pricing
-    self.price / 100
-  end
-
   def timing
     if self.time < 60
       "#{self.time} mins"

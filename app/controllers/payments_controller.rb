@@ -7,7 +7,7 @@ class PaymentsController < ApplicationController
   end
 
   def create
-    authorize @booking
+    @lesson = Lesson.find(params[:lesson_id])
     customer = Stripe::Customer.create(
       source: params[:stripeToken],
       email:  params[:stripeEmail]
@@ -21,12 +21,13 @@ class PaymentsController < ApplicationController
     )
 
     @booking.update(payment: charge.to_json, state: 'paid')
-    redirect_to order_path(@order)
+    redirect_to lesson_booking_path(@lesson, @booking)
 
   rescue Stripe::CardError => e
     flash[:alert] = e.message
-    redirect_to new_order_payment_path(@order)
+    redirect_to new_lesson_booking_payment_path(@lesson, @booking)
   end
+    authorize @booking
 end
 
 private
