@@ -1,13 +1,16 @@
 class PaymentsController < ApplicationController
   before_action :set_booking
+  skip_after_action :verify_authorized
 
   def new
     @lesson = Lesson.find(params[:lesson_id])
-    authorize @booking
+    @payment = Payment.create
+    # authorize @payment
   end
 
   def create
     @lesson = Lesson.find(params[:lesson_id])
+    @payment = Payment.create
     customer = Stripe::Customer.create(
       source: params[:stripeToken],
       email:  params[:stripeEmail]
@@ -27,7 +30,7 @@ class PaymentsController < ApplicationController
     flash[:alert] = e.message
     redirect_to new_lesson_booking_payment_path(@lesson, @booking)
   end
-    authorize @booking
+    # authorize @payment
 end
 
 private

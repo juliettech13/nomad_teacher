@@ -9,7 +9,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.find(params[:id])
     @teacher = @lesson.teacher
 
-    # @booking = Booking.new(user: current_user, lesson: @lesson)
+    @booking = Booking.new(user: current_user, lesson: @lesson)
     authorize @lesson
     # authorize @booking
   end

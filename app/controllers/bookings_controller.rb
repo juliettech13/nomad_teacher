@@ -7,8 +7,8 @@ class BookingsController < ApplicationController
   end
 
   def show
-    booking = Booking.find(params[:id])
-    authorize booking
+   @booking = current_user.bookings.where(state: 'paid').find(params[:id])
+   authorize @booking
   end
 
   def new
