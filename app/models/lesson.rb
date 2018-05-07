@@ -1,5 +1,6 @@
 class Lesson < ApplicationRecord
   belongs_to :teacher
+  has_many :bookings
 
   validates :name, presence: true
   validates :description, presence: true

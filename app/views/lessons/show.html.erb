@@ -7,9 +7,14 @@
     <div class="banner" style="background-image: url(<%= image_path @lesson.picture %>);">
     </div>
     <div class="your-brush-options text-center">
-      <div class="btn btn-custom text-center">
-        <%= link_to "Book", new_lesson_booking_path(@lesson) %>
-      </div>
+
+
+
+      <%= form_tag lesson_bookings_path(@lesson) do %>
+  <%= hidden_field_tag 'lesson_id', @lesson.id %>
+  <%= submit_tag 'Purchase', class: 'btn btn-custom' %>
+<% end %>
+
     </div>
   </div>
   <div class="description-text col-xs-6">

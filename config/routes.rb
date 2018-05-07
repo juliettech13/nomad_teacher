@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :teachers, only: [:new, :create, :edit, :update]
   resources :lessons do
     resources :reviews, only: [:index, :show, :new, :create, :destroy]
-    resources :bookings, only: [:show, :new, :create, :edit, :update, :destroy]
+    resources :bookings, only: [:show, :create, :edit, :update, :destroy]
   end
 
 

@@ -10,8 +10,6 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def create?
-    # i am not the owner of the toothbrush
-    # booking.toothbrush.user != current_user
     true
   end
 
@@ -26,5 +24,4 @@ class BookingPolicy < ApplicationPolicy
   def destroy?
     user == record.user
   end
-
 end
