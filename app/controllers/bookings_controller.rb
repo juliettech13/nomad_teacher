@@ -14,12 +14,12 @@ class BookingsController < ApplicationController
   def new
     booking = Booking.new(lesson: @lesson, user: @user)
     authorize booking
-    redirect_to lesson_bookings_path(booking)
+    redirect_to new_booking_payment_path(booking)
   end
 
   def create
     booking  = Booking.create!(amount_cents: @lesson.price_cents, state: 'pending', user: @user, lesson_sku: @lesson.sku, lesson_id: @lesson.id)
-    redirect_to lesson_booking_path(@lesson, booking)
+    redirect_to new_lesson_booking_payment_path(@lesson, booking)
     authorize booking
   end
 

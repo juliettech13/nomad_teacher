@@ -4,19 +4,19 @@ class LessonPolicy < ApplicationPolicy
       scope.all
     end
 
-    def show
+    def show?
       true
     end
 
-    def create
+    def create?
       true
     end
 
-    def update
+    def update?
       record.user == user
     end
 
-    def destroy
+    def destroy?
       record.user == user
     end
   end
