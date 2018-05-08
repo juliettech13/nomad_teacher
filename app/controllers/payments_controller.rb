@@ -4,8 +4,8 @@ class PaymentsController < ApplicationController
 
   def new
     @lesson = Lesson.find(params[:lesson_id])
-    @payment = Payment.create
-    # authorize @payment
+    @teacher = @lesson.teacher
+
   end
 
   def create

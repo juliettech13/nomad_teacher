@@ -1,32 +1,75 @@
-.description-text{
+.page {
+  background-color: #d3dae0;
+  height: 100%;
+  font-family: 'Cutive Mono', 'sans serif';
+}
+
+h2{
+    font-family: 'Carrois Gothic', 'sans serif';
+}
+
+h4{
+    font-family: 'Carrois Gothic', 'sans serif';
+}
+
+p {
+    font-family: 'Carrois Gothic', 'sans serif';
+}
+
+.box {
+  background-color: white;
+  height: 614px;
+  margin-top: 79px;
+  margin-bottom: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Carrois Gothic', 'sans serif';
+  box-shadow: 10px 10px 5px -7px #ACACAC;
+}
+
+.lesson-description {
+  color: #646377;
+  h2 {
+    color: #020024;
+    font-size: 23px
+  }
+}
+
+.teacher-info{
+  h2{
+    font-size: 23px
+  }
+}
+
+.description-t{
+    // font-family: 'Carrois Gothic', 'sans serif';
   h2 {
     font-size: 25px;
-    font-family: 'Carrois Gothic', 'sans serif'
   }
   h4 {
     font-size: 20px
   }
-  p {
-    font-family: 'Cutive Mono', 'sans serif';
-  }
 }
 
 .banner-title {
-  margin-top: 50px;
+  // margin-top: 50px;
   text-align: center;
+  text-transform: uppercase;
+  color: #020024;
+  margin: 0 auto;
+  h1{
+  font-family: 'Cutive Mono', 'sans serif';
+  font-size: 32px;
+  font-weight: bold
+  }
 }
 
 .lesson-pic{
   border-radius: 10px;
-  box-shadow: 10px 10px 5px -7px rgba(135,123,135,1);
+  box-shadow: 10px 10px 5px -7px #ACACAC;
 }
 
 .purchase-btn {
   margin-top: 20px
 }
 
-// h1 {
-//     font-family: 'Carrois Gothic', 'sans serif'
-//   }
-//   p {
-//     font-family: 'Cutive Mono', 'sans serif';

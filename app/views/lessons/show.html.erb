@@ -1,45 +1,47 @@
-<div class="container">
-  <div class="row">
-   <div class="banner-content">
-    <div class="banner-title col-xs-6">
-      <h1><%= @lesson.name %></h1>
-    </div>
-  </div>
-  <div class="col-xs-6">
-    <div class="banner lesson-pic" style="background-image: url(<%= image_path @lesson.picture %>);">
-    </div>
-    <div class="purchase-btn">
-      <div class="text-center">
-        <%= form_tag lesson_bookings_path(@lesson, @booking) do %>
-        <%= hidden_field_tag 'lesson_id', @lesson.id %>
-        <%= submit_tag 'Purchase', class: 'btn btn-custom' %>
-        <% end %>
+<div class="page">
+  <div class="container">
+    <div class="box">
+     <div class="banner-content">
+      <div class="banner-title text-center">
+        <h1><%= @lesson.name %></h1>
       </div>
     </div>
-  </div>
-  <div class="description-text col-xs-6">
-    <div class="lesson-description">
-      <h2><strong>About the class:</strong></h2>
-      <div class="lesson-information">
-        <div class="lesson-price">
-          <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
-        </div>
-        <div class="lesson-time">
-          <h4><strong>Price:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h4>
-        </div>
-        <div class="lesson-description">
-          <h4><strong>Description:</strong></h4>
-          <p><%= @lesson.description %></p>
+    <div class="col-xs-6">
+      <div class="banner lesson-pic" style="background-image: url(<%= image_path @lesson.picture %>);">
+      </div>
+      <div class="purchase-btn">
+        <div class="text-center">
+          <%= form_tag lesson_bookings_path(@lesson, @booking) do %>
+          <%= hidden_field_tag 'lesson_id', @lesson.id %>
+          <%= submit_tag 'Purchase', class: 'btn btn-custom' %>
+          <% end %>
         </div>
       </div>
-      <div class="teacher-info">
-        <div class="teacher-name">
-          <h2><strong>About the teacher:</strong></h2>
-          <h4><strong>Name:</strong> <%= @teacher.naming %></h4>
+    </div>
+    <div class="description-t col-xs-6">
+      <div class="lesson-description">
+        <h2><strong>About the class:</strong></h2>
+        <div class="lesson-information">
+          <div class="lesson-price">
+            <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
+          </div>
+          <div class="lesson-time">
+            <h4><strong>Price:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h4>
+          </div>
+          <div class="lesson-description">
+            <h4><strong>Description:</strong></h4>
+            <p><%= @lesson.description %></p>
+          </div>
         </div>
-        <div class="teacher-background">
-          <h4><strong>Background:</strong></h4>
-          <p><%= @teacher.background %></p>
+        <div class="teacher-info">
+          <div class="teacher-name">
+            <h2><strong>About the teacher:</strong></h2>
+            <h4><strong>Name:</strong> <%= @teacher.naming %></h4>
+          </div>
+          <div class="teacher-background">
+            <h4><strong>Background:</strong></h4>
+            <p><%= @teacher.background %></p>
+          </div>
         </div>
       </div>
     </div>
