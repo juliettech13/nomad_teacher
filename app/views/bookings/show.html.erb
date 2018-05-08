@@ -1,28 +1,33 @@
-<div class="page">
+<!-- <div class="page"> -->
   <div class="container">
-    <div class="banner-title text-center">
-      <div class="title">
-        <h1>Congratulations on your order!</h1>
-      </div>
-      <div class="booking-info">
-        <div class="info-list">
-          <ul>
-            <div class="booking-status">
-              <li>Status: <%= @booking.state %></li>
+    <div class="box box-show-booking">
+      <div class="row">
+        <div class="title-container">
+          <div class="title">
+            <div class="text-center">
+              <h1>Congratulations on your order!</h1>
             </div>
-            <div class="lesson-name">
-              <li>Item: <%= @booking.lesson.name %></li>
-            </div>
-            <div class="booking-price">
-              <li>Amount: <%= humanized_money_with_symbol(@booking.amount) %></li>
-            </div>
-
-</ul>
+          </div>
+          <div class="booking-info">
+            <div class="info-list">
+              <ul>
+                <div class="booking-status">
+                  <li><h2>Status: <%= @booking.state %></h2></li>
+                </div>
+                <div class="lesson-name">
+                  <li><h2>Item: <%= @booking.lesson.name %></h2></li>
+                </div>
+                <div class="booking-price">
+                  <li><h2>Amount: <%= humanized_money_with_symbol(@booking.amount_cents) %></h2></li>
+                </div>
+              </ul>
             </div>
           </div>
           <div class="btn btn-custom">
-            <%= link_to "Access your lesson", lesson_path(@booking.lesson) %></p>
+            <%= link_to "Access your lesson", lesson_path(@booking.lesson) %>
           </div>
         </div>
       </div>
     </div>
+  </div>
+<!-- </div> -->
