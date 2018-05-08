@@ -1,3 +1,77 @@
-.box-show-booking{
-  display: flex
+.boxing{
+  width: 900px;
+  height: 463px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.title-container {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #020024;
+  h1{
+  font-family: 'Carrois Gothic', 'sans serif';
+  font-size: 28px;
+  font-weight: bold
+  }
+}
+
+.booking-info {
+  grid-column: 4/5;
+  grid-row: 2;
+  ul{
+    list-style-type: none;
+  }
+}
+
+.call-to-action {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.booking-status {
+  h2{
+  font-family: 'Carrois Gothic', 'sans serif';
+  font-size: 28px;
+  font-weight: bold
+}
+}
+
+html {
+  background-color: #28505D;
+}
+
+.planePath {
+  stroke: #D9DADA;
+  stroke-width: .1%;
+  stroke-width: .5%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.fil1 {
+  fill: #D9DADA;
+}
+
+.fil2 {
+  fill: #C5C6C6;
+}
+
+.fil4 {
+  fill: #9D9E9E;
+}
+
+.fil3 {
+  fill: #AEAFB0;
 }
