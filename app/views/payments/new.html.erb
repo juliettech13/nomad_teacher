@@ -1,19 +1,18 @@
-<div class="page">
+<div class="payment-new">
   <div class="container">
+
+
     <div class="box box-payment" style="height: 430px; padding: 20px;">
       <div class="box-content">
-      <div class="row">
-       <div class="banner-content">
+        <div class="row">
+         <div class="banner-content">
+         </div>
        </div>
-     </div>
-     <div class="col-xs-6">
-      <div class="banner lesson-pic pic-payment" style="background-image: url(<%= image_path @lesson.picture %>);">
+       <div class="col-xs-6">
+        <div class="banner lesson-pic pic-payment" style="background-image: url(<%= image_path @lesson.picture %>);">
+        </div>
       </div>
-    </div>
-    <div class="banner-title payment-title col-xs-6 offset-xs-6">
-      <h1>Review your order</h1>
-    </div>
-    <div class="description-text col-xs-6">
+      <div class="description-text col-xs-6">
         <div class="lesson-information">
           <div class="lesson-name">
             <h4><strong>Lesson name: </strong><%= @lesson.name %></h4>
@@ -31,17 +30,16 @@
             <h4><strong>Price:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h4>
           </div>
           <div class="purchase-btn">
-              <%= form_tag lesson_booking_payments_path(@lesson, @booking) do %>
-              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-name="Lesson"
-              data-email="<%= current_user.email %>"
-              data-description="Lesson <%= @booking.lesson_sku %>"
-              data-amount="<%= @booking.amount_cents %>"
-              data-currency="<%= @booking.amount.currency %>">
-            </script>
-            <% end %>
-
+            <%= form_tag lesson_booking_payments_path(@lesson, @booking) do %>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-name="Lesson"
+            data-email="<%= current_user.email %>"
+            data-description="Lesson <%= @booking.lesson_sku %>"
+            data-amount="<%= @booking.amount_cents %>"
+            data-currency="<%= @booking.amount.currency %>">
+          </script>
+          <% end %>
         </div>
       </div>
     </div>
