@@ -88,7 +88,7 @@ Lesson.create(
   teacher_id: Teacher.all.sample.id,
   time: [60, 80, 90, 120, 200].sample,
   sku: 'ruby-on-rails',
-  picture: "http://res.cloudinary.com/jules/image/upload/v1525453514/nomad_teacher/ruby_on_rails.png"
+  picture: "https://images.unsplash.com/photo-1519397154350-533cea5b8bff?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=009599aa0979619a04f21ec0d5486955&auto=format&fit=crop&w=900&q=60"
 
 )
 
@@ -100,7 +100,7 @@ Lesson.create(
   teacher_id: Teacher.all.sample.id,
   time: [60, 80, 90, 120, 200].sample,
   sku: 'digital-marketing',
-  picture: "https://www.mytechlogy.com/upload/by_users/IramSaeed/301801114638digitalmarketing.jpg"
+  picture: "https://images.unsplash.com/photo-1523006520266-d3a4a8152803?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9f72708186012faffab3b4c3b2ca1396&auto=format&fit=crop&w=900&q=60"
 )
 
 
@@ -123,7 +123,7 @@ Lesson.create(
   teacher_id: Teacher.all.sample.id,
   time: [60, 80, 90, 120, 200].sample,
   sku: 'seo',
-  picture: "https://cdn.rswebsols.com/wp-content/uploads/2016/11/Why-SEO-Marketing-is-Important-for-Startup.jpg"
+  picture: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cbbd27149a8243a42eb2bd0bd918ba8f&auto=format&fit=crop&w=900&q=60"
 )
 
 Lesson.create(
@@ -134,7 +134,7 @@ Lesson.create(
   teacher_id: Teacher.all.sample.id,
   time: [60, 80, 90, 120, 200].sample,
   sku: 'react',
-  picture: "https://cdn-images-1.medium.com/max/1600/1*wj5ujzj5wPQIKb0mIWLgNQ.png"
+  picture: "https://images.unsplash.com/photo-1454165205744-3b78555e5572?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=863ffeea823f0ffb0885fe1a5e77e645&auto=format&fit=crop&w=900&q=60"
 )
 
 
