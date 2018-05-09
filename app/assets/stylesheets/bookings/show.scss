@@ -1,4 +1,4 @@
-.boxing{
+.boxing {
   width: 900px;
   height: 463px;
   margin: 0 auto;
@@ -13,6 +13,7 @@
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
+
 .title-container {
   grid-column: 1 / 4;
   grid-row: 1;
