@@ -3,6 +3,7 @@ class LessonPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
     def show?
       true
@@ -12,12 +13,15 @@ class LessonPolicy < ApplicationPolicy
       true
     end
 
+    def edit?
+      true
+    end
+
     def update?
-      record.user == user
+      true
     end
 
     def destroy?
       record.user == user
     end
-  end
 end
