@@ -1,0 +1,36 @@
+.signing-form {
+  border-radius: 10px;
+  margin: 80px;
+  margin-top: 80px;
+}
+
+.get-in-touch{
+  height: 300px;
+}
+
+.links-forms {
+  padding: 10px 0 55px 0;
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 8px;
+    font-size: 14px;
+  }
+}
+
+.links-forms:hover {
+  padding: 10px 0 55px 0;
+  display: flex;
+  justify-content: center;
+  a {
+    font-size: 14px;
+  }
+}
+
+.box-devise {
+      background-color: #2b5c9c;
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 50px auto;
+}
