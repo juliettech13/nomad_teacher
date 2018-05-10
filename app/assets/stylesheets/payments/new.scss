@@ -4,6 +4,7 @@
 
 .pic-payment {
   height: 364px;
+  border-radius: 10px;
 }
 
 .payment-title{
@@ -40,4 +41,8 @@ hr {
 
 .lesson-description > h3{
   font-size: 18px
+}
+
+.error-msg{
+  margin-top: 60px;
 }
