@@ -1,5 +1,9 @@
+.page{
+  min-height: 90vh
+}
+
 .pic-payment {
-  height: 449px;
+  height: 364px;
 }
 
 .payment-title{
@@ -24,43 +28,12 @@ hr {
  text-transform: uppercase
 }
 
-// .lesson-description-p {
-//   color: #646377;
-//   h2 {
-//     color: #020024;
-//     font-size: 18px
-//   }
-// }
-
 .teacher-info{
   h2{
     font-size: 18px
   }
 }
 
-// .lesson-name {
-//   h4 {
-//     font-size: 20px
-//   }
-// }
-
-// .lesson-time {
-//   h4 {
-//     font-size: 20px
-//   }
-// }
-
-// .lesson-price {
-//   h4 {
-//     font-size: 20px
-//   }
-// }
-
-// .teacher-name {
-//   h4 {
-//     font-size: 20px
-//   }
-// }
 .pink-text > h4{
   font-size: 16px
 }

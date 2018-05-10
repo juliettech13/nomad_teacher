@@ -19,11 +19,6 @@
   position: absolute
 }
 
-/* Logo */
-.navbar-wagon-brand img {
-  height: 50px;
-}
-
 /* User Avatar */
 .navbar-wagon .avatar {
   height: 35px;
@@ -48,6 +43,7 @@
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
+  font-weight: bold;
 }
 .navbar-wagon-link:hover {
   color: #da552f;

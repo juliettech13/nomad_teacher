@@ -41,14 +41,31 @@
   letter-spacing: 1px;
   font-weight: 400;
   background-color: #900048;
-  // border-color: #ea1f62;
+  text-transform: uppercase;
   border-radius: 51px;
   width: 200px;
+  // max-width: 300px;
   font-family: 'Carrois Gothic';
   a {
     color: white;
   }
 }
+
+.btn-customer{
+  color: #eff0f4;
+  letter-spacing: 1px;
+  font-weight: 400;
+  background-color: #900048;
+  text-transform: uppercase;
+  border-radius: 51px;
+  width: 260px;
+  // max-width: 300px;
+  font-family: 'Carrois Gothic';
+  a {
+    color: white;
+  }
+}
+
 
 .btn:hover{
   color: #74dbef;
