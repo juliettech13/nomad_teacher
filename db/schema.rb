@@ -52,8 +52,6 @@ ActiveRecord::Schema.define(version: 20180510000658) do
 
   create_table "teachers", force: :cascade do |t|
     t.text "background"
-    t.integer "longitude"
-    t.integer "latitude"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

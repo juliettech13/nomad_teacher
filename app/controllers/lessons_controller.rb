@@ -1,7 +1,6 @@
 class LessonsController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :set_lesson, only: [:show, :edit]
-  # after_action :skip_pundit?
 
   def index
     @lessons = policy_scope(Lesson)
@@ -12,19 +11,7 @@ class LessonsController < ApplicationController
     @booking = Booking.new(user: current_user, lesson: @lesson)
   end
 
-  def new
-  end
-
-  def create
-  end
-
   def edit
-  end
-
-  def update
-  end
-
-  def destroy
   end
 
   private

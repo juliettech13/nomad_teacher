@@ -29,8 +29,6 @@ p "Creating teachers...."
 20.times do
   Teacher.create(
     background: Faker::Lorem.paragraph,
-    latitude: Faker::Address.latitude,
-    longitude: Faker::Address.longitude,
     user_id: User.all.sample.id
     )
 end
@@ -68,7 +66,8 @@ Lesson.create(
   teacher_id: Teacher.all.sample.id,
   time: 20,
   sku: 'cv-writing',
-  picture: "fZclFtagPic"
+  picture: "business-computer-desk-7060.jpg",
+  video_url: "fZclFtagPic"
 )
 
 Lesson.create(

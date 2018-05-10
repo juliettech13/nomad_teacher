@@ -1,10 +1,7 @@
 class BookingsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
+  before_action :authenticate_user!, only: [:new, :create]
   before_action :set_lesson, only: [:new, :create]
   before_action :set_user, only: [:new, :create, :show]
-
-  def index
-  end
 
   def show
    # @booking = current_user.bookings.where(state: 'paid').find(params[:id])
@@ -22,15 +19,6 @@ class BookingsController < ApplicationController
     booking  = Booking.create!(amount_cents: @lesson.price_cents, state: 'pending', user: @user, lesson_sku: @lesson.sku, lesson_id: @lesson.id)
     redirect_to new_lesson_booking_payment_path(@lesson, booking)
     authorize booking
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
   end
 
   private

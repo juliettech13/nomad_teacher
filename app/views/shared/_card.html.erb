@@ -1,17 +1,16 @@
 <% @lessons.each do |lesson| %>
-<div class="cards">
-  <div class="col-sm-4">
-    <div class="card" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.18) 50%), url(<%= lesson.picture %>)">
-      <%#= link_to lessons_show_path(lesson.id) %>
-      <div class="card-category">
-        <h3><%= lesson.category %></h3>
-      </div>
-      <div class="card-description">
-        <a class="card-link" href="<%= lesson_path(lesson.id) %>" ><h2><%= lesson.name %></h2></a>
-        <p><%= lesson.price %> EUR</p>
+  <div class="cards">
+    <div class="col-sm-4">
+      <div class="card" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.18) 50%), url(<%= lesson.picture %>)">
+        <div class="card-category">
+          <h3><%= lesson.category %></h3>
+        </div>
+        <div class="card-description">
+          <a class="card-link" href="<%= lesson_path(lesson.id) %>" ><h2><%= lesson.name %></h2></a>
+          <p><%= lesson.price %> EUR</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 <% end %>
 

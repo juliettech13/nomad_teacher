@@ -1,7 +1,15 @@
 .signing-form {
   border-radius: 10px;
   margin: 80px;
-  margin-top: 80px;
+  h2{
+    background-color: #020024;
+    color: white;
+    text-transform: uppercase;
+    width: 150px;
+    padding: 20px;
+    font-size: 20px;
+    margin: 0 auto;
+  }
 }
 
 .get-in-touch{
@@ -15,6 +23,12 @@
   a {
     margin: 8px;
     font-size: 14px;
+    color: #900048;
+    text-transform: uppercase
+  }
+  a:hover{
+    font-weight: bold;
+    text-decoration: none
   }
 }
 
@@ -28,9 +42,10 @@
 }
 
 .box-devise {
-      background-color: #2b5c9c;
-    color: white;
-    padding: 20px;
-    border-radius: 4px;
-    margin: 50px auto;
+  background-color: #2b5c9c;
+  color: white;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 50px auto;
 }
+
