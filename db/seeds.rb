@@ -9,6 +9,7 @@ require 'faker'
 require 'date'
 
 p "Destroying everything..."
+
 Booking.destroy_all
 Lesson.destroy_all
 Teacher.destroy_all
@@ -44,8 +45,7 @@ Lesson.create(
   teacher_id: Teacher.all.sample.id,
   time: [60, 80, 90, 120, 200].sample,
   sku: 'french',
-  picture: "https://media-cdn.tripadvisor.com/media/photo-s/0d/f4/db/9e/paris-in-one-day-sightseeing.jpg",
-  video: "https://www.youtube.com/watch?v=b5H3b_Hh0Lw"
+  picture: "https://media-cdn.tripadvisor.com/media/photo-s/0d/f4/db/9e/paris-in-one-day-sightseeing.jpg"
 )
 
 Lesson.create(

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'video/show'
+
   root to: 'pages#home'
   devise_for :users
   namespace :users do
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   resources :teachers, only: [:new, :create, :edit, :update]
   resources :lessons do
     resources :reviews, only: [:index, :show, :new, :create, :destroy]
+    resources :videos, only: [:show]
     resources :bookings, only: [:show, :create] do
       resources :payments, only: [:new, :create]
     end
