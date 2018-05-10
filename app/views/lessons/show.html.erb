@@ -8,7 +8,7 @@
             <div class="col-xs-6">
               <div class="pic-n-btn">
                 <div class="lesson-pic-container">
-                  <div class="banner lesson-pic" style="background-image: url(<%= image_path @lesson.picture %>);">
+                  <div class="banner lesson-pic pic-payment" style="background-image: url(<%= image_path @lesson.picture %>);">
                   </div>
                 </div>
                 <div class="purchase-btn">
@@ -37,9 +37,9 @@
                       <p><%= @lesson.description %></p>
                     </div>
                   </div>
-                  <div class="teacher-info">
-                    <div class="teacher-name">
+                  <div class="lesson-description">
                       <h2><strong>About the teacher:</strong></h2>
+                    <div class="teacher-name">
                       <h4><strong>Name:</strong> <%= @teacher.naming %></h4>
                     </div>
                     <div class="teacher-background">

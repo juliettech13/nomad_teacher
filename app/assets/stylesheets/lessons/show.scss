@@ -5,12 +5,12 @@
   width: 100% !important
 }
 
-.lesson-show{
-  background: #606c88;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(bottom, #3f4c6b, #606c88);
-  background: -o-linear-gradient(bottom, #3f4c6b, #606c88);
-  background: linear-gradient(to top, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+// .lesson-show{
+//   background: #606c88;  /* fallback for old browsers */
+//   background: -webkit-linear-gradient(bottom, #3f4c6b, #606c88);
+//   background: -o-linear-gradient(bottom, #3f4c6b, #606c88);
+//   background: linear-gradient(to top, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// }
 
 h2 {
     font-family: 'Carrois Gothic', 'sans serif';
@@ -35,24 +35,27 @@ p {
   box-shadow: 10px 10px 5px -7px #646377;
 }
 
-.lesson-description {
-  color: #646377;
-  h2 {
-    color: #020024;
+.lesson-description > h2 {
+    background-color: #020024;
+    color: #ffffff;
+    max-width: 202px;
+    padding: 10px;
     font-size: 18px
   }
-}
 
 .lesson-pic-container{
   margin-top: 40px;
   margin-left: 40px
 }
 
-.teacher-info{
-  h2{
-    font-size: 18px
-  }
-}
+// .teacher-info > h2{
+//   background-color: #020024;
+//   color: #ffffff;
+//   max-width: 179px;
+//   padding: 10px;
+//   font-size: 18px
+// }
+
 
 .description-t {
   margin-right: 40px;
@@ -103,7 +106,7 @@ p {
 }
 
 .lesson-pic {
-  border-radius: 10px;
+  // border-radius: 10px;
   box-shadow: 10px 10px 5px -7px #ACACAC;
 }
 
