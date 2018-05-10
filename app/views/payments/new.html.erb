@@ -16,20 +16,22 @@
       </div>
       <div class="description-text col-xs-6">
         <div class="lesson-information">
+          <div class="pink-text">
           <div class="lesson-name">
             <h4><strong>Lesson name: </strong><%= @lesson.name %></h4>
           </div>
           <div class="lesson-time">
             <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
           </div>
-          <div class="lesson-description">
+
             <div class="teacher-name">
               <h4><strong>Teacher:</strong> <%= @teacher.naming %></h4>
+
             </div>
           </div>
-          <div class="lesson-price">
+          <div class="lesson-description">
             <hr/>
-            <h4><strong>Price:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h4>
+            <h3><strong>PRICE:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h3>
           </div>
           <div class="purchase-btn">
             <%= form_tag lesson_booking_payments_path(@lesson, @booking) do %>

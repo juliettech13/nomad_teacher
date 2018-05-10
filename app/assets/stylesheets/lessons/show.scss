@@ -16,6 +16,11 @@ h2 {
     font-family: 'Carrois Gothic', 'sans serif';
 }
 
+h3{
+    font-family: 'Carrois Gothic', 'sans serif';
+
+}
+
 h4 {
     font-family: 'Carrois Gothic', 'sans serif';
 }
@@ -39,7 +44,14 @@ p {
  h2 {
     background-color: #020024;
     color: #ffffff;
-    max-width: 202px;
+    max-width: 209px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  h3 {
+    background-color: #020024;
+    color: #ffffff;
+    max-width: 106px;
     padding: 10px;
     font-size: 18px;
   }
