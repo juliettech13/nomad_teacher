@@ -6,7 +6,8 @@
   height: 100px;
   padding: 0px 50px;
   color: white;
-  i{
+  // position: fixed;
+  i {
     color: white
   }
 }
@@ -14,6 +15,7 @@
 .footer-links {
   display: flex;
   align-items: center;
+  color: white
 }
 
 .footer-links a {
@@ -24,22 +26,14 @@
   padding: 0px 10px;
 }
 .footer-links a:hover {
+  color: white;
   opacity: 1;
 }
 
 .footer-copyright{
-  h4{
+  h4 {
   font-family: 'Cutive Mono', 'sans serif'
   }
 }
 // .footer .fa-heart {
 //   color: #D23333;
-// }.footer .fa-medium {
-//   color: #D23333;
-// }.footer .fa-instagram {
-//   color: #D23333;
-// }.footer .fa-github {
-//   color: #D23333;
-// }.footer .fa-linkedin {
-//   color: #D23333;
-// }

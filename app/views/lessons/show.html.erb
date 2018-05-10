@@ -1,57 +1,44 @@
-    <div class="index-page">
-      <div class="container">
-        <div class="banner-title-show text-center">
-          <h1><%= @lesson.name.upcase %></h1>
+<div class="container">
+  <div class="banner-title-show text-center">
+    <h1><%= @lesson.name.upcase %></h1>
+  </div>
+  <div class="col-xs-6">
+    <div class="pic-n-btn">
+      <div class="lesson-pic-container">
+        <div class="banner lesson-pic pic-payment" style="background-image: url(<%= image_path @lesson.picture %>);">
         </div>
-        <!-- <div class="box"> -->
-          <div class="row">
-            <div class="col-xs-6">
-              <div class="pic-n-btn">
-                <div class="lesson-pic-container">
-                  <div class="banner lesson-pic pic-payment" style="background-image: url(<%= image_path @lesson.picture %>);">
-                  </div>
-                </div>
-                <div class="purchase-btn">
-                  <div class="text-center">
-                    <%= form_tag lesson_bookings_path(@lesson, @booking) do %>
-                    <%= hidden_field_tag 'lesson_id', @lesson.id %>
-                    <%= submit_tag 'Purchase', class: 'btn btn-custom' %>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-6">
-              <div class="description-t">
-                <div class="lesson-description">
-                  <h2><strong>ABOUT THE CLASS:</strong></h2>
-                  <div class="pink-text">
-            <!--       <div class="lesson-information">
-              <div class="lesson-price"> -->
-                <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
-                <!--  </div> -->
-                <!--    <div class="lesson-time"> -->
-                  <h4><strong>Price:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h4>
-                  <!-- </div> -->
-                  <!--   <div class="lesson-description"> -->
-                    <h4><strong>Description:</strong></h4>
-                    <p><%= @lesson.description %></p>
-                  </div>
-                  <!--    </div> -->
-                </div>
-                <div class="lesson-description">
-                    <h2><strong>ABOUT THE TEACHER:</strong></h2>
-                </div>
-                  <div class="pink-text">
-
-                    <h4><strong>Name:</strong> <%= @teacher.naming %></h4>
-                    <h4><strong>Background:</strong></h4>
-                    <p><%= @teacher.background %></p>
-                  </div>
-              </div>
-            </div>
-            <!-- </div> -->
-          </div>
+      </div>
+      <div class="purchase-btn">
+        <div class="text-center">
+          <%= form_tag lesson_bookings_path(@lesson, @booking) do %>
+          <%= hidden_field_tag 'lesson_id', @lesson.id %>
+          <%= submit_tag 'Purchase', class: 'btn btn-custom text-center' %>
+          <% end %>
         </div>
       </div>
     </div>
+  </div>
+  <div class="col-xs-6">
+    <div class="description-t">
+      <div class="lesson-description">
+        <h2><strong>ABOUT THE CLASS:</strong></h2>
+      </div>
+      <div class="pink-text">
+        <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
+        <h4><strong>Price:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h4>
+        <h4><strong>Description:</strong></h4>
+        <p><%= @lesson.description %></p>
+      </div>
+      <div class="lesson-description">
+        <h2><strong>ABOUT THE TEACHER:</strong></h2>
+      </div>
+      <div class="pink-text">
+        <h4><strong>Name:</strong> <%= @teacher.naming %></h4>
+        <h4><strong>Background:</strong></h4>
+        <p><%= @teacher.background %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
