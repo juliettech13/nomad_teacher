@@ -1,50 +1,45 @@
-<div class="index-page">
-  <div class="container">
-    <div class="banner banner-title-show text-center">
-      <h1>REVIEW YOUR ORDER</h1>
-    </div>
-    <div class="box-payment" style="height: 430px; padding: 20px;">
-      <div class="box-content">
-        <div class="row">
-         <div class="banner-content">
-         </div>
-       </div>
-       <div class="col-xs-6">
-        <div class="banner lesson-pic pic-payment" style="background-image: url(<%= image_path @lesson.picture %>);">
-        </div>
+<div class="container">
+  <div class="banner banner-title-show text-center">
+    <h1>REVIEW YOUR ORDER</h1>
+  </div>
+  <div class="box-payment">
+    <div class="row">
+     <div class="col-xs-6">
+      <div class="lesson-pic pic-payment" style="background-image: url(<%= image_path @lesson.picture %>);">
       </div>
-      <div class="description-text col-xs-6">
-        <div class="lesson-information">
-          <div class="pink-text">
-          <div class="lesson-name">
+    </div>
+    <div class="description-text col-xs-6">
+      <div class="lesson-information">
+        <div class="pink-text">
+          <!-- <div class="lesson-name"> -->
             <h4><strong>Lesson name: </strong><%= @lesson.name %></h4>
-          </div>
-          <div class="lesson-time">
+          <!-- </div> -->
+          <!-- <div class="lesson-time"> -->
             <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
-          </div>
-            <div class="teacher-name">
-              <h4><strong>Teacher:</strong> <%= @teacher.naming %></h4>
-            </div>
-          </div>
-          <div class="lesson-description">
-            <hr/>
-            <h3><strong>PRICE:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h3>
-          </div>
-          <div class="purchase-btn">
-            <%= form_tag lesson_booking_payments_path(@lesson, @booking) do %>
-            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-name="Lesson"
-            data-email="<%= current_user.email %>"
-            data-description="Lesson <%= @booking.lesson_sku %>"
-            data-amount="<%= @booking.amount_cents %>"
-            data-currency="<%= @booking.amount.currency %>">
-          </script>
-          <% end %>
+          <!-- </div> -->
+          <!-- <div class="teacher-name"> -->
+            <h4><strong>Teacher:</strong> <%= @teacher.naming %></h4>
+          <!-- </div> -->
         </div>
+        <div class="lesson-description">
+          <hr/>
+          <h3><strong>PRICE:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h3>
+        </div>
+        <div class="purchase-btn">
+          <%= form_tag lesson_booking_payments_path(@lesson, @booking) do %>
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-name="Lesson"
+          data-email="<%= current_user.email %>"
+          data-description="Lesson <%= @booking.lesson_sku %>"
+          data-amount="<%= @booking.amount_cents %>"
+          data-currency="<%= @booking.amount.currency %>">
+        </script>
+        <% end %>
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
 

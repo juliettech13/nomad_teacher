@@ -15,7 +15,7 @@ hr {
     padding: 0;
 }
 
-.box-content{
+.box-payment{
   padding: 25px;
 }
 
@@ -38,27 +38,33 @@ hr {
   }
 }
 
-.lesson-name {
-  h4 {
-    font-size: 20px
-  }
+// .lesson-name {
+//   h4 {
+//     font-size: 20px
+//   }
+// }
+
+// .lesson-time {
+//   h4 {
+//     font-size: 20px
+//   }
+// }
+
+// .lesson-price {
+//   h4 {
+//     font-size: 20px
+//   }
+// }
+
+// .teacher-name {
+//   h4 {
+//     font-size: 20px
+//   }
+// }
+.pink-text > h4{
+  font-size: 16px
 }
 
-.lesson-time {
-  h4 {
-    font-size: 20px
-  }
+.lesson-description > h3{
+  font-size: 18px
 }
-
-.lesson-price {
-  h4 {
-    font-size: 20px
-  }
-}
-
-.teacher-name {
-  h4 {
-    font-size: 20px
-  }
-}
-

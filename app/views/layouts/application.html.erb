@@ -11,13 +11,11 @@
     <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic|Cutive+Mono" rel="stylesheet">
   </head>
   <body>
-    <div class="page">
       <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
       <%= yield %>
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
-    </div>
   </body>
 </html>
     <div class="footer">
