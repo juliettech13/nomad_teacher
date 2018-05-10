@@ -25,30 +25,31 @@
               <div class="description-t">
                 <div class="lesson-description">
                   <h2><strong>About the class:</strong></h2>
-                  <div class="lesson-information">
-                    <div class="lesson-price">
-                      <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
-                    </div>
-                    <div class="lesson-time">
-                      <h4><strong>Price:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h4>
-                    </div>
-                    <div class="lesson-description">
-                      <h4><strong>Description:</strong></h4>
-                      <p><%= @lesson.description %></p>
-                    </div>
+                  <div class="pink-text">
+            <!--       <div class="lesson-information">
+              <div class="lesson-price"> -->
+                <h4><strong>Length of course: </strong><%= @lesson.timing %></h4>
+                <!--  </div> -->
+                <!--    <div class="lesson-time"> -->
+                  <h4><strong>Price:</strong> <%= humanized_money_with_symbol(@lesson.price) %></h4>
+                  <!-- </div> -->
+                  <!--   <div class="lesson-description"> -->
+                    <h4><strong>Description:</strong></h4>
+                    <p><%= @lesson.description %></p>
                   </div>
-                  <div class="lesson-description">
-                      <h2><strong>About the teacher:</strong></h2>
-                    <div class="teacher-name">
-                      <h4><strong>Name:</strong> <%= @teacher.naming %></h4>
-                    </div>
-                    <div class="teacher-background">
-                      <h4><strong>Background:</strong></h4>
-                      <p><%= @teacher.background %></p>
-                    </div>
-                  </div>
+                  <!--    </div> -->
                 </div>
+                <div class="lesson-description">
+                    <h2><strong>About the teacher:</strong></h2>
+                </div>
+                  <div class="pink-text">
+
+                    <h4><strong>Name:</strong> <%= @teacher.naming %></h4>
+                    <h4><strong>Background:</strong></h4>
+                    <p><%= @teacher.background %></p>
+                  </div>
               </div>
+            </div>
             <!-- </div> -->
           </div>
         </div>

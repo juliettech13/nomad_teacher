@@ -35,17 +35,36 @@ p {
   box-shadow: 10px 10px 5px -7px #646377;
 }
 
-.lesson-description > h2 {
+.lesson-description {
+ h2 {
     background-color: #020024;
     color: #ffffff;
     max-width: 202px;
     padding: 10px;
-    font-size: 18px
+    font-size: 18px;
   }
+}
+
+.pink-text {
+  background-color: #900048;
+  color: #ffffff;
+  max-width: 583px;
+  padding: 10px;
+  font-size: 16px;
+}
+
 
 .lesson-pic-container{
   margin-top: 40px;
   margin-left: 40px
+}
+
+.info-group > h4{
+  background-color: #900048;
+    color: #ffffff;
+    max-width: 202px;
+    padding: 10px;
+    font-size: 16px
 }
 
 // .teacher-info > h2{
