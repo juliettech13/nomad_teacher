@@ -3,7 +3,7 @@
   <div class="grouping">
     <div class="title-container">
       <div class="text-center">
-        <div class="pink-text">
+        <div class="pink-text congratulations">
           <h1>Congratulations on your order!</h1>
           <h4>-You're on your pathway to Wisdom-</h4>
         </div>
@@ -12,12 +12,12 @@
     <div class="booking-info">
       <div class="text-center">
         <ul>
-          <div class="lesson-name">
+          <!-- <div class="lesson-name"> -->
             <li><h2>ITEM: <%= @booking.lesson.name %></h2></li>
-          </div>
-          <div class="booking-price">
+          <!-- </div> -->
+          <!-- <div class="booking-price"> -->
             <li><h2>AMOUNT: <%= humanized_money_with_symbol(@booking.amount_cents) %></h2></li>
-          </div>
+          <!-- </div> -->
         </ul>
       </div>
     </div>

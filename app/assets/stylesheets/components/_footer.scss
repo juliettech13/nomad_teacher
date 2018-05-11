@@ -1,33 +1,32 @@
 .footer {
   background: #020024;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: white;
-  // position: fixed;
+  color: #7F7E90;
   i {
-    color: white
+    color: #7F7E90
   }
 }
 
 .footer-links {
   display: flex;
   align-items: center;
-  color: white
+  color: #7F7E90
 }
 
 .footer-links a {
-  color: white;
-  opacity: 0.15;
+  color: #7F7E90;
   text-decoration: none;
   font-size: 18px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
-  color: white;
-  opacity: 1;
+  color: #7F7E90;
+  font-weight: bold
 }
 
 .footer-copyright {
@@ -36,5 +35,3 @@
   font-size: 20px;
   }
 }
-// .footer .fa-heart {
-//   color: #D23333;

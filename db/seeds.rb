@@ -21,7 +21,7 @@ p "Creating users...."
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     password: "password123",
-    background: Faker::Lorem.paragraph,
+    background: Faker::Lorem.sentence(3),
     )
 end
 
@@ -36,8 +36,8 @@ end
 p "Creating lessons...."
 Lesson.create(
   name: "French 101",
-  category: "Languages & Writing",
-  description: Faker::Lorem.paragraph,
+  category: "Languages",
+  description: Faker::Lorem.sentence(3),
   price_cents: 400,
   teacher_id: Teacher.all.sample.id,
   time: 25,
@@ -45,11 +45,34 @@ Lesson.create(
   picture: "https://media-cdn.tripadvisor.com/media/photo-s/0d/f4/db/9e/paris-in-one-day-sightseeing.jpg",
   video_url: "ujDtm0hZyII"
 )
+Lesson.create(
+  name: "Home gardening",
+  category: "Lifestyle",
+  description: Faker::Lorem.sentence(3),
+  price_cents: 300,
+  teacher_id: Teacher.all.sample.id,
+  time: 21,
+  sku: 'gardening',
+  picture: "https://media.angieslist.com/s3fs-public/styles/widescreen_large/s3/s3fs-public/home-garden.JPG?37enwB2E.rbKnI5YrW6JZ_irCpGbr5ct&itok=Usbna66n",
+  video_url: "6fR76wIrQ2I"
+)
+
+Lesson.create(
+  name: "How to write your CV",
+  category: "Languages",
+  description: Faker::Lorem.sentence(3),
+  price_cents: 500,
+  teacher_id: Teacher.all.sample.id,
+  time: 20,
+  sku: 'cv-writing',
+  picture: "https://images.unsplash.com/photo-1524591431555-cc7876d14adf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f16cff8aab12fca7983772cc1e5272b&auto=format&fit=crop&w=900&q=60",
+  video_url: "fZclFtagPic"
+)
 
 Lesson.create(
   name: "Morning Yoga",
   category: "Lifestyle",
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.sentence(3),
   price_cents: 300,
   teacher_id: Teacher.all.sample.id,
   time: [60, 80, 90, 120, 200].sample,
@@ -57,23 +80,22 @@ Lesson.create(
   picture: "https://upaya-yoga.com/wp-content/uploads/2017/12/yoga.jpg",
   video_url: "Is8tMCpv4F8"
 )
-
 Lesson.create(
-  name: "How to write your CV",
-  category: "Languages & Writing",
-  description: Faker::Lorem.paragraph,
-  price_cents: 500,
+  name: "Ruby on Rails Intro",
+  category: "Technology",
+  description: Faker::Lorem.sentence(3),
+  price_cents: 1500,
   teacher_id: Teacher.all.sample.id,
-  time: 20,
-  sku: 'cv-writing',
-  picture: "business-computer-desk-7060.jpg",
-  video_url: "fZclFtagPic"
+  time: 62,
+  sku: 'ruby-on-rails',
+  picture: "https://images.unsplash.com/photo-1519397154350-533cea5b8bff?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=009599aa0979619a04f21ec0d5486955&auto=format&fit=crop&w=900&q=60",
+  video_url: "pPy0GQJLZUM"
 )
 
 Lesson.create(
   name: "College Essay Writing",
-  category: "Languages & Writing",
-  description: Faker::Lorem.paragraph,
+  category: "Languages",
+  description: Faker::Lorem.sentence(3),
   price_cents: 2000,
   teacher_id: Teacher.all.sample.id,
   time: 21,
@@ -82,23 +104,11 @@ Lesson.create(
   video_url: "IN6IOSMviS4"
 )
 
-Lesson.create(
-  name: "Ruby on Rails Intro",
-  category: "Tech",
-  description: Faker::Lorem.paragraph,
-  price_cents: 1500,
-  teacher_id: Teacher.all.sample.id,
-  time: 62,
-  sku: 'ruby-on-rails',
-  picture: "https://images.unsplash.com/photo-1519397154350-533cea5b8bff?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=009599aa0979619a04f21ec0d5486955&auto=format&fit=crop&w=900&q=60",
-  video_url: "pPy0GQJLZUM"
-
-)
 
 Lesson.create(
   name: "Digital Marketing",
-  category: "Tech",
-  description: Faker::Lorem.paragraph,
+  category: "Technology",
+  description: Faker::Lorem.sentence(3),
   price_cents: 500,
   teacher_id: Teacher.all.sample.id,
   time: 40,
@@ -110,8 +120,8 @@ Lesson.create(
 
 Lesson.create(
   name: "Spanish Crash Course",
-  category: "Languages & Writing",
-  description: Faker::Lorem.paragraph,
+  category: "Languages",
+  description: Faker::Lorem.sentence(3),
   price_cents: 400,
   teacher_id: Teacher.all.sample.id,
   time: 50,
@@ -122,8 +132,8 @@ Lesson.create(
 
 Lesson.create(
   name: "SEO Mastering",
-  category: "Tech",
-  description: Faker::Lorem.paragraph,
+  category: "Technology",
+  description: Faker::Lorem.sentence(3),
   price_cents: 2000,
   teacher_id: Teacher.all.sample.id,
   time: 48,
@@ -134,8 +144,8 @@ Lesson.create(
 
 Lesson.create(
   name: "Introduction to React",
-  category: "Tech",
-  description: Faker::Lorem.paragraph,
+  category: "Technology",
+  description: Faker::Lorem.sentence(3),
   price_cents: 2500,
   teacher_id: Teacher.all.sample.id,
   time: 118,
@@ -148,7 +158,7 @@ Lesson.create(
 Lesson.create(
   name: "DIY Jewelry",
   category: "Lifestyle",
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.sentence(3),
   price_cents: 1000,
   teacher_id: Teacher.all.sample.id,
   time: 42,
@@ -160,7 +170,7 @@ Lesson.create(
 Lesson.create(
   name: "Zumba",
   category: "Lifestyle",
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.sentence(3),
   price_cents: 1500,
   teacher_id: Teacher.all.sample.id,
   time: 52,
@@ -172,7 +182,7 @@ Lesson.create(
 Lesson.create(
   name: "Life Coaching Level II",
   category: "Lifestyle",
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.sentence(3),
   price_cents: 1000,
   teacher_id: Teacher.all.sample.id,
   time: 32,
@@ -182,9 +192,9 @@ Lesson.create(
 )
 
 Lesson.create(
-  name: "Psychology for Business Owners",
-  category: "Business",
-  description: Faker::Lorem.paragraph,
+  name: "Agile Methodology Intro",
+  category: "Technology",
+  description: Faker::Lorem.sentence(3),
   price_cents: 500,
   teacher_id: Teacher.all.sample.id,
   time: [60, 80, 90, 120, 200].sample,
@@ -196,7 +206,7 @@ Lesson.create(
 Lesson.create(
   name: "How to hire the right people",
   category: "Business",
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.sentence(3),
   price_cents: 900,
   teacher_id: Teacher.all.sample.id,
   time: 120,
@@ -205,22 +215,11 @@ Lesson.create(
   video_url: "JPHVeQ7-ynA"
 )
 
-Lesson.create(
-  name: "Home gardening",
-  category: "Lifestyle",
-  description: Faker::Lorem.paragraph,
-  price_cents: 300,
-  teacher_id: Teacher.all.sample.id,
-  time: 21,
-  sku: 'gardening',
-  picture: "https://media.angieslist.com/s3fs-public/styles/widescreen_large/s3/s3fs-public/home-garden.JPG?37enwB2E.rbKnI5YrW6JZ_irCpGbr5ct&itok=Usbna66n",
-  video_url: "6fR76wIrQ2I"
-)
 
 Lesson.create(
   name: "Anatomy drawing",
   category: "Lifestyle",
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.sentence(3),
   price_cents: 1500,
   teacher_id: Teacher.all.sample.id,
   time: 57,
@@ -231,8 +230,8 @@ Lesson.create(
 
 Lesson.create(
   name: "Master CSS",
-  category: "Tech",
-  description: Faker::Lorem.paragraph,
+  category: "Technology",
+  description: Faker::Lorem.sentence(3),
   price_cents: 1000,
   teacher_id: Teacher.all.sample.id,
   time: 32,
@@ -243,8 +242,8 @@ Lesson.create(
 
 Lesson.create(
   name: "How to write your first novel",
-  category: "Languages & Writing",
-  description: Faker::Lorem.paragraph,
+  category: "Languages",
+  description: Faker::Lorem.sentence(3),
   price_cents: 800,
   teacher_id: Teacher.all.sample.id,
   time: 60,
@@ -256,7 +255,7 @@ Lesson.create(
 Lesson.create(
   name: "Oil Painting basics",
   category: "Lifestyle",
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.sentence(3),
   price_cents: 500,
   teacher_id: Teacher.all.sample.id,
   time: [60, 80, 90, 120, 200].sample,
@@ -266,9 +265,9 @@ Lesson.create(
 )
 
 Lesson.create(
-  name: "Accounting for your business 101",
+  name: "Accounting 101",
   category: "Business",
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.sentence(3),
   price_cents: 1000,
   teacher_id: Teacher.all.sample.id,
   time: 60,

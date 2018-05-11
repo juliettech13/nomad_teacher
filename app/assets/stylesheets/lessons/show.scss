@@ -1,32 +1,22 @@
 html {
   background-color: #EDEDF7;
-  // height: 100% !important;
   font-family: 'Cutive Mono', 'sans serif';
-  // width: 100% !important
 }
 
-// .lesson-show{
-//   background: #606c88;  /* fallback for old browsers */
-//   background: -webkit-linear-gradient(bottom, #3f4c6b, #606c88);
-//   background: -o-linear-gradient(bottom, #3f4c6b, #606c88);
-//   background: linear-gradient(to top, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-// }
-
 h2 {
-    font-family: 'Carrois Gothic', 'sans serif';
+  font-family: 'Carrois Gothic', 'sans serif';
 }
 
 h3{
-    font-family: 'Carrois Gothic', 'sans serif';
-
+  font-family: 'Carrois Gothic', 'sans serif';
 }
 
 h4 {
-    font-family: 'Carrois Gothic', 'sans serif';
+  font-family: 'Carrois Gothic', 'sans serif';
 }
 
 p {
-    font-family: 'Carrois Gothic', 'sans serif';
+  font-family: 'Carrois Gothic', 'sans serif';
 }
 
 .box {
@@ -140,7 +130,6 @@ p {
   box-shadow: 10px 10px 5px -7px #ACACAC;
 }
 
-.purchase-btn {
-  margin: 20px
+.button-cta{
+  margin: 30px
 }
-

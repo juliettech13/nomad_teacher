@@ -8,7 +8,7 @@
         <div class="banner lesson-pic pic-payment" style="background-image: url(<%= image_path @lesson.picture %>);">
         </div>
       </div>
-      <div class="purchase-btn">
+      <div class="button-cta">
         <div class="text-center">
           <%= form_tag lesson_bookings_path(@lesson, @booking) do %>
           <%= hidden_field_tag 'lesson_id', @lesson.id %>
