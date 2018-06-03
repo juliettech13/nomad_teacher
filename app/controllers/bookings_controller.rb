@@ -4,7 +4,6 @@ class BookingsController < ApplicationController
   before_action :set_user, only: [:new, :create, :show]
 
   def show
-   # @booking = current_user.bookings.where(state: 'paid').find(params[:id])
    @booking = current_user.bookings.find(params[:id])
    authorize @booking
   end
