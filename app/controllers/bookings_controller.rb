@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:show, :new, :create]
   before_action :set_lesson, only: [:new, :create]
   before_action :set_user, only: [:new, :create, :show]
 

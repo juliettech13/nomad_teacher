@@ -277,8 +277,6 @@ Lesson.create(
 )
 
 p "Creating bookings....."
-
-
 10.times do
 Booking.create(
   user_id: User.all.sample.id,

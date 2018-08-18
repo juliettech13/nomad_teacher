@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'video/show'
 
   root to: 'pages#home'
   devise_for :users
@@ -13,5 +12,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:show, :create] do
       resources :payments, only: [:new, :create]
     end
+
+  get 'video/show'
   end
 end
