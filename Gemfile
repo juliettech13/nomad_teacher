@@ -19,7 +19,7 @@ gem 'webpacker'
 gem 'faker'
 gem 'cloudinary'
 gem 'pundit'
-gem 'heroku'
+# gem 'heroku'
 gem 'money-rails'
 gem 'stripe'
 
